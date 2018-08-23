@@ -29,10 +29,10 @@ def create_wordcloud(text):
 	
 	# Image should exists
 	mask = np.array(Image.open(os.path.join(thedir, "cloud3.png")))
-	stopwords = set('and is or on to')
+	stopwords = set(STOPWORDS)
 	wc = WordCloud(background_color=bg_col, mask=mask, max_words=max_w, stopwords=stopwords)
 	wc.generate(text)
-	wc.to_file(os.path.join(thedir, "wc2.png"))
+	wc.to_file(os.path.join(thedir, "img\\wc.png"))
 	print("Done")
 	plt.figure(figsize=(25,25))
 	plt.imshow(wc, interpolation="bilinear")
