@@ -91,4 +91,5 @@ Naming file wordcloud.py -> WordCloud cannot be imported
 Using wrong canvas -> Canvas too small
 Using wrong canvas -> Cannot identify it as a picture
 Using non-existent image -> OSError: Image cannot be opened
+This saves images, but those cannot be accessed?
 """
