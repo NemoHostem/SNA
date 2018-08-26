@@ -19,9 +19,10 @@ shadow = False
 angle = 140
 
 fig = plt.figure()
+
 plt.title(title)
 plt.pie(items, explode=split, labels=labels, colors=colors, autopct='%1.1f%%', shadow=shadow, startangle=angle)
-
 plt.axis('equal')
 plt.show()
-fig.savefig("imgs/Figure2.png")
+
+fig.savefig("imgs/Figure1.png")

@@ -14,10 +14,10 @@ import wikipedia as wp
 import wordcloud
 from wordcloud import WordCloud,STOPWORDS
 
-bg_col = "white"
+bg_col = "#ff22ff"
 max_w = 100
 thedir = os.path.dirname(__file__)
-csv_file = "csv/test.csv"
+csv_file = "csvs/test.csv"
 
 def get_wiki_data(que):
 
@@ -34,7 +34,7 @@ def create_wordcloud(text):
 	stopwords = set(STOPWORDS)
 	wc = WordCloud(background_color=bg_col, mask=mask, max_words=max_w, stopwords=stopwords)
 	wc.generate(text)
-	wc.to_file(os.path.join(thedir, "img\\wc3.png"))
+	wc.to_file(os.path.join(thedir, "imgs/wc1.png"))
 	print("Done")
 	plt.figure(figsize=(25,25))
 	plt.imshow(wc, interpolation="bilinear")
@@ -81,8 +81,8 @@ def filter_hashtag_data(word):
 			new_hashtag += char
 	return new_hashtag
 	
-print(create_wordcloud(get_text_from_csv(csv_file)))
-# print(create_wordcloud(get_wiki_data("Social Network Analysis")))
+#print(create_wordcloud(get_text_from_csv(csv_file)))
+print(create_wordcloud(get_wiki_data("Social Network Analysis")))
 
 """
 Errors:

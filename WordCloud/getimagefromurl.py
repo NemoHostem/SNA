@@ -5,5 +5,5 @@ url = 'https://cdn.journaldev.com/wp-content/uploads/2018/02/python-io-string-ex
 with urllib.request.urlopen(url) as f:
 	b = io.BytesIO(f.read())
 	im = Image.open(b)
-	im.save('out.png')
+	im.save('imgs/out.png')
 	print("Done")
